@@ -1,0 +1,9 @@
+@import "./normalize.css";
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 9;
+  padding: 0;
+}
