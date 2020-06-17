@@ -4,8 +4,7 @@ import router from './router/index'
 import store from './store'
 import axios from 'axios'
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import './plugins/element'
 // 导入全局样式表
 import 'assets/css/global.css'
 
@@ -17,8 +16,6 @@ axios.interceptors.request.use(config => {
   return config
 })
 Vue.prototype.$http = axios
-
-Vue.use(ElementUI)
 
 new Vue({
   router,

@@ -20,7 +20,7 @@
           :collapse="isCollapse"
           :collapse-transition="false"
           router
-          :default-active="$store.state.activePath"
+          :default-active="activePath"
         >
           <div class="toggle-button" @click="toggleClick">|||</div>
           <!-- 一级菜单 -->
@@ -63,10 +63,12 @@ export default {
   data () {
     return {
       menuList: [],
-      isCollapse: false
+      isCollapse: false,
+      activePath: ''
     }
   },
   created () {
+    this.activePath = window.sessionStorage.getItem('activePath')
     this.getMenuList()
   },
   methods: {
@@ -84,7 +86,7 @@ export default {
     },
     // 点击动态改变default-active颜色值
     menuItemClick (activePath) {
-      this.$store.commit('saveNavActivePath', activePath)
+      window.sessionStorage.setItem('activePath', activePath)
     }
   }
 }
