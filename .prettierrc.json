@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "printWidth": 80,
+  "jsxBracketSameLine": false,
+  "disableLanguages": ["vue"]
+}
